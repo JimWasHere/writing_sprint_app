@@ -1,0 +1,8 @@
+Title: Writing Sprint App
+Description: An app that forces the user to write for five minutes at a time or lose all their progress. The product
+can then be copied into a text document. Allows user to make steady progress on writing their next big novel.
+Objects: TextEditor:
+            start()
+            stop()
+            erase()
+            copy()

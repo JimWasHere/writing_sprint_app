@@ -1,0 +1,41 @@
+
+<MainScreen>
+
+    GridLayout:
+        cols: 1
+        padding: 20
+        spacing: 10
+        Label:
+            id: prompt
+            text: "Set the cursor in the box to start the timer."
+            size_hint_y: 0.1
+        Label:
+            id: timer
+            text: "Good Luck!"
+            size_hint_y: 0.1
+        Label:
+            id: message
+            text: "Have Fun, be creative!"
+            size_hint_y: 0.1
+        TextInput:
+            id: text_input
+            hint_text: "Set cursor here to start timer"
+            size_hint_y: 0.6
+            on_focus: root.start_timer()
+            on_text: root.stop_erase_timer()
+        Button:
+            text: "Reset"
+            size_hint_y: 0.1
+            on_press: root.reset()
+
+
+<RootWidget>:
+    canvas.before:
+        Color:
+            rgba: (0.015, 0.023, 0.176, 0.8)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    MainScreen:
+        id: main_screen
+        name: "main_screen"
